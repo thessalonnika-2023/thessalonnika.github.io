@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thessalonnika Labour Relations Consulting</title>
+  <meta name="description" content="Professional Labour Relations Consulting in South Africa. Support for discipline, CCMA preparation, workplace policies, and HR compliance." />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #5d6b82;
+      --brand: #123a63;
+      --brand-2: #1e5a96;
+      --accent: #d9a441;
+      --line: #e4e9f2;
+      --shadow: 0 12px 30px rgba(18, 58, 99, 0.08);
+      --radius: 20px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-size: 1.05rem;
+      color: var(--brand);
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .menu a {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .menu a:hover { color: var(--brand); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(18, 58, 99, 0.16);
+    }
+
+    .btn-primary:hover { background: var(--brand-2); transform: translateY(-1px); }
+
+    .btn-light {
+      background: #fff;
+      color: var(--brand);
+      border-color: var(--line);
+    }
+
+    .btn-light:hover { border-color: var(--brand); }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(217, 164, 65, 0.12);
+      color: #8a6310;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      color: var(--brand);
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f8fd 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 12px;
+      color: var(--brand);
+      font-size: 1.35rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .tick {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(217, 164, 65, 0.16);
+      color: #8a6310;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-top: 1px;
+    }
+
+    section {
+      padding: 36px 0;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2.35rem);
+      color: var(--brand);
+      letter-spacing: -0.02em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--brand);
+      font-size: 1.12rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about-layout,
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .info-box {
+      background: rgba(18, 58, 99, 0.04);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .info-box p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .mini-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .mini-list li { margin-bottom: 8px; }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    details + details { margin-top: 14px; }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--brand);
+      outline: none;
+    }
+
+    details p {
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    .contact-panel {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .contact-lines div {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .contact-lines strong {
+      display: block;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .contact-lines span,
+    .contact-lines a {
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-weight: 700;
+      color: var(--brand);
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font: inherit;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--brand-2);
+      box-shadow: 0 0 0 4px rgba(30, 90, 150, 0.08);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1200;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+      background: #25d366;
+      color: #fff;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 28px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .small {
+      font-size: 0.92rem;
+    }
+
+    .message {
+      display: none;
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(30, 90, 150, 0.08);
+      color: var(--brand);
+      border: 1px solid rgba(30, 90, 150, 0.18);
+      font-size: 0.95rem;
+    }
+
+    .message.show { display: block; }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-layout,
+      .contact-layout,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .nav {
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <strong>Thessalonnika Labour Relations Consulting</strong>
+        <span>Professional labour relations support in South Africa</span>
+      </div>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Trusted guidance for workplace challenges</div>
+          <h1>Clear labour relations support for businesses that want to stay protected and compliant.</h1>
+          <p class="lead">
+            Thessalonnika Labour Relations Consulting helps employers, small businesses, and organisations handle
+            disciplinary matters, workplace conflict, CCMA preparation, policies, and labour law compliance with a calm,
+            practical, and professional approach.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book a Consultation</a>
+            <a class="btn btn-light" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
+
+          <div class="stats" aria-label="Business highlights">
+            <div class="stat">
+              <strong>Practical</strong>
+              <span>Simple guidance that businesses can actually use.</span>
+            </div>
+            <div class="stat">
+              <strong>Professional</strong>
+              <span>Workplace matters handled with care and structure.</span>
+            </div>
+            <div class="stat">
+              <strong>Responsive</strong>
+              <span>Quick support when workplace issues need attention.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Key services summary">
+          <h2>What we help with</h2>
+          <ul class="checklist">
+            <li><span class="tick">✓</span><span>Employee discipline and warnings</span></li>
+            <li><span class="tick">✓</span><span>CCMA case preparation and support</span></li>
+            <li><span class="tick">✓</span><span>Disciplinary hearings</span></li>
+            <li><span class="tick">✓</span><span>Workplace policies and procedures</span></li>
+            <li><span class="tick">✓</span><span>HR compliance guidance</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>
+            Thessalonnika Labour Relations Consulting exists to help businesses navigate workplace relations with confidence.
+            Many employers do not need confusion, panic, or expensive mistakes. They need clear steps, correct process, and
+            practical advice. That is what this service is built to provide.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <div class="card">
+            <h3>Our purpose</h3>
+            <p>
+              We support employers and organisations in managing workplace issues before they become bigger legal or
+              disciplinary problems. The focus is on fairness, compliance, and practical solutions that help protect both the
+              business and the people working in it.
+            </p>
+          </div>
+
+          <div class="info-box">
+            <p><strong>Ideal for:</strong> small businesses, NGOs, schools, and organisations that need affordable guidance.</p>
+            <ul class="mini-list">
+              <li>Employers handling staff disputes</li>
+              <li>Businesses needing basic labour compliance support</li>
+              <li>Organisations preparing for workplace hearings</li>
+              <li>Clients who need professional advice without unnecessary complications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>
+            The services below are designed to support employers in a straightforward and professional way.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Labour Relations Advisory</h3>
+            <p>Guidance on employee discipline, misconduct, conflict management, and everyday workplace relations concerns.</p>
+          </article>
+
+          <article class="card">
+            <h3>CCMA Preparation</h3>
+            <p>Assistance with preparing documents, understanding the process, and getting ready for hearings or referrals.</p>
+          </article>
+
+          <article class="card">
+            <h3>Disciplinary Hearings</h3>
+            <p>Support with fair disciplinary procedures, hearing structure, and workplace decision-making.</p>
+          </article>
+
+          <article class="card">
+            <h3>Workplace Policies</h3>
+            <p>Drafting and reviewing workplace policies and procedures that help businesses stay organised and compliant.</p>
+          </article>
+
+          <article class="card">
+            <h3>HR Compliance Support</h3>
+            <p>Practical help with labour law compliance, workplace process, and employer responsibilities.</p>
+          </article>
+
+          <article class="card">
+            <h3>Employer Guidance</h3>
+            <p>Advice for owners and managers who need a calm and clear path through difficult employee issues.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Why Choose Us</h2>
+          <p>
+            A business does not need loud promises. It needs reliable support. This is a service built on clarity, structure, and respect for proper process.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Simple communication</h3>
+            <p>We explain workplace matters in plain language, so clients understand what is happening and what comes next.</p>
+          </div>
+          <div class="card">
+            <h3>Professional handling</h3>
+            <p>Workplace issues are treated seriously, with discretion and a practical approach from start to finish.</p>
+          </div>
+          <div class="card">
+            <h3>Business-minded support</h3>
+            <p>The goal is not confusion. The goal is to help your business remain stable, fair, and compliant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>FAQ</h2>
+          <p>Some common questions are answered below.</p>
+        </div>
+
+        <details>
+          <summary>Do you assist small businesses?</summary>
+          <p>Yes. Small businesses are a key focus, especially those that need affordable and practical labour relations support.</p>
+        </details>
+
+        <details>
+          <summary>Can you help with CCMA matters?</summary>
+          <p>Yes. Support can include preparation, documentation guidance, and general case readiness for CCMA-related matters.</p>
+        </details>
+
+        <details>
+          <summary>Do you create workplace policies?</summary>
+          <p>Yes. Workplace policy drafting and review are part of the service offering.</p>
+        </details>
+
+        <details>
+          <summary>How do clients contact you?</summary>
+          <p>Clients can use WhatsApp, phone, email, or the contact form below.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>
+            Reach out for professional labour relations support. Replace the placeholders below with your real contact details before publishing.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-panel">
+            <div class="contact-lines">
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+27XXXXXXXXX">+27 XX XXX XXXX</a>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:info@thessalonnika.co.za">info@thessalonnika.co.za</a>
+              </div>
+              <div>
+                <strong>Service Area</strong>
+                <span>South Africa</span>
+              </div>
+            </div>
+
+            <p class="form-note">
+              For fastest response, WhatsApp is recommended during business hours.
+            </p>
+          </div>
+
+          <div class="contact-panel">
+            <form id="contactForm">
+              <div>
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div>
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us briefly what you need help with..." required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <div class="message" id="formMessage">
+                Your message is ready. Connect this form to your email service or WhatsApp link when you are ready to go live.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="btn whatsapp-float" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    WhatsApp
+  </a>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Thessalonnika Labour Relations Consulting</strong>
+        <div class="small">Professional labour relations support for South African businesses.</div>
+      </div>
+      <div class="small">© <span id="year"></span> Thessalonnika Labour Relations Consulting. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("formMessage").classList.add("show");
+    });
+  </script>
+</body>
+</html>
+
+<a href="tel:+27636717245">+27 63 671 7245</a>
+<a href="https://wa.me/27813137642" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+<a href="mailto:thessalonnika@outlook.com">thessalonnika@outlook.com</a>
+<div class="brand">
+  <img src="logo.png" alt="Thessalonnika Labour Relations Consulting logo" style="height:50px; width:auto; margin-bottom:8px;">
+  <strong>Thessalonnika Labour Relations Consulting</strong>
+<div>
+  <strong>Alternate Email</strong>
+  <a href="mailto:kweetsa-consulting@outlook.com">kweetsa-consulting@outlook.com</a>
+</div>
+  <span>Joseph Motsepe</span>
+  <span>Professional labour relations support in South Africa</span>
+</div>
