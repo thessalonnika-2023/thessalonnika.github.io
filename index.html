@@ -980,6 +980,18 @@
     align-items: flex-start;
   }
 }
+    @media (max-width: 760px) {
+  .hero::before {
+    background-attachment: scroll;
+  }
+
+  .hero-images .img-large:hover,
+  .hero-images .img-small:hover,
+  .card:hover,
+  .stat:hover {
+    transform: none;
+  }
+}
   </style>
 </head>
 <body>
