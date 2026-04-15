@@ -992,6 +992,31 @@
     transform: none;
   }
 }
+    /* MOBILE CONTACT BAND FIX */
+
+@media (max-width:760px){
+
+.contact-band-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.contact-band-inner div{
+  padding:8px 6px;
+}
+
+.contact-band-inner strong{
+  font-size:0.8rem;
+  display:block;
+}
+
+.contact-band-inner span{
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+}
   </style>
 </head>
 <body>
