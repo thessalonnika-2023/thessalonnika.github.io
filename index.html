@@ -1017,8 +1017,45 @@
  .contact-band{
   padding:14px 0;
 } 
+/* MOBILE CONTACT BAR */
+
+.mobile-contact-bar{
+  display:none;
 }
 
+@media (max-width:760px){
+
+.mobile-contact-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:flex;
+  z-index:9999;
+}
+
+.mobile-contact-bar a{
+  flex:1;
+  text-align:center;
+  padding:14px 0;
+  font-weight:600;
+  text-decoration:none;
+  color:white;
+}
+
+.mobile-contact-bar a:nth-child(1){
+  background:#1e5a96;
+}
+
+.mobile-contact-bar a:nth-child(2){
+  background:#25D366;
+}
+
+.mobile-contact-bar a:nth-child(3){
+  background:#d9a441;
+}
+body{
+padding-bottom:70px;
 }
   </style>
 </head>
@@ -1458,5 +1495,10 @@ Dignity in resolution — We believe that even the most difficult workplace issu
       });
     });
   </script>
+  <div class="mobile-contact-bar">
+  <a href="tel:+27636717245">Call</a>
+  <a href="https://wa.me/27813137642">WhatsApp</a>
+  <a href="mailto:thessalonnika@outlook.com">Email</a>
+</div>
 </body>
 </html>
